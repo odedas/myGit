@@ -1,9 +1,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="styles.css">
-    </link>
     <script src="addjs.js"></script>
+    <!--link rel="stylesheet" href="styles.css"-->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
@@ -16,28 +15,37 @@
 
 <body>
     <div class="container">
-        <h1 onclick="doSomething()">Hello Git</h1>
-        <b></b>
+        <div class="jumbotron">
+            <h1 onclick="doSomething()">Hello Git</h1>
+            <p>some basic commands to start working with git and github</p>
+        </div>
         <p>use <i><b>git init</b></i> to start working with git</p>
         <p>use <i><b>git status</b></i> to see whats going on</p>
         <p>use <i><b>git add [file]</b></i> to include in what will be committed</p>
         <p>use <i><b>git commit -m "my first commit"</b></i>to commit with -m (messsage to commit)</p>
-        <p>use <i><b>git log</b></i> to view what happened</p>
-        <pre>
+        <p data-toggle="collapse" data-target="#logs">use <a><i><b>git log</b></i></a> to view what happened</p>
+        <div id="logs" class="collapse">
+            <pre>
         commit 8cc92de4b86024be7c66686522071bd1643a6949 (HEAD -> master)
         Author: Oded Assaraf <oded.assaraf@gmail.com>
             Date: Sat Apr 17 14:26:01 2021 +0300
             my first commit
         </pre>
+        </div>
         <p>add some cool style and commit again</p>
         <p>use <i><b>git checkout [commit id]</b></i> to return to some point int timeline</p>
         <p>use <i><b>git branch</b></i> to view your branches or <i><b>git checkout -b feature1</b></i> to create new
             branch and switch to it</p>
-        <p>use <i><b>git merge</b></i> to merge your changes, you can use <i><b>--squash</b></i> flage to keep clean merge</p>
-        <h2>Git hub</h2>
-        <p>create a new repository in git hub and connect the local repository to the remote by using <i><b>git remote add origin [url]</b></i></p>
-        <p>push changes, make a pull request and merge changes... <i><b>git push -u origin master</b></i></p>
-
+        <p>
+            use <i><b>git merge</b></i> to merge your changes, you can use <i><b>--squash</b></i> flage to keep clean merge
+        </p>
+        <div class="page-header">
+            <h2>Git hub</h2>
+            <a href="https://github.com/odedas" class="btn btn-info" role="button" target="_blank">Oded's github</a>
+        </div>
+        <p>create a new repository in git hub and connect the local repository to the remote by using <i><b>git remote
+                    add origin [url]</b></i></p>
+        <p>push changes, make a pull request and merge changes <i><b>git push -u origin master</b></i></p>
     </div>
 </body>
 
